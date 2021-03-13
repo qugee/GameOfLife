@@ -18,7 +18,6 @@ public void setup () {
      buttons[i][j] = new Life(i,j);
   }
   }
-  buffer = new boolean[NUM_ROWS][NUM_COLS];
 }
 
 public void draw () {
