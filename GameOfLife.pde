@@ -22,7 +22,7 @@ public void setup () {
 
 public void draw () {
   background( 0 );
-  if (running == false) //pause the program
+  if (running == true) //pause the program
     return;
   copyFromButtonsToBuffer();
 
