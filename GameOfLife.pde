@@ -13,11 +13,11 @@ public void setup () {
 
   buttons = new Life[NUM_ROWS][NUM_COLS]; //your code to initialize buttons goes here
   
-  for(int i = 0;i<NUM_ROWS;i++)   //your code to initialize buffer goes here
-  for(int j = 0;j<NUM_COLS;j++)
+  for(int i = 0;i<NUM_ROWS;i++){   //your code to initialize buffer goes here
+  for(int j = 0;j<NUM_COLS;j++){
      buttons[i][j] = new Life(i,j);
-  
-  
+  }
+  }
   buffer = new boolean[NUM_ROWS][NUM_COLS];
 }
 
@@ -27,10 +27,11 @@ public void draw () {
     return;
   copyFromButtonsToBuffer();
 
-  for(int i = 0;i<NUM_ROWS;i++)
-  for(int j = 0;j<NUM_COLS;j++)   //use nested loops to draw the buttons here
+  for(int i = 0;i<NUM_ROWS;i++){
+  for(int j = 0;j<NUM_COLS;j++){   //use nested loops to draw the buttons here
       buttons[i][j] = new Life(i,j);
-      
+      }
+      }
   copyFromBufferToButtons();
 }
 
