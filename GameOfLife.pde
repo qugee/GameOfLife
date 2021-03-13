@@ -12,10 +12,11 @@ public void setup () {
   Interactive.make( this );
 
   buttons = new Life[NUM_ROWS][NUM_COLS]; //your code to initialize buttons goes here
-  for(int i = 0;i<NUM_ROWS;i++)
+  
+  for(int i = 0;i<NUM_ROWS;i++)   //your code to initialize buffer goes here
   for(int j = 0;j<NUM_COLS;j++)
-    buttons[i][j] = new Life(i,j); 
-  //your code to initialize buffer goes here
+     if(
+  
   
   buffer = new boolean[NUM_ROWS][NUM_COLS];
 }
@@ -26,7 +27,9 @@ public void draw () {
     return;
   copyFromButtonsToBuffer();
 
-  //use nested loops to draw the buttons here
+  for(int i = 0;i<NUM_ROWS;i++)
+  for(int j = 0;j<NUM_COLS;j++)
+    buttons[i][j] = new Life(i,j); //use nested loops to draw the buttons here
 
   copyFromBufferToButtons();
 }
@@ -60,8 +63,8 @@ public class Life {
   private boolean alive;
 
   public Life (int row, int col) {
-    // width = 400/NUM_COLS;
-    // height = 400/NUM_ROWS;
+    width = 400/NUM_COLS;
+    height = 400/NUM_ROWS;
     myRow = row;
     myCol = col; 
     x = myCol*width;
