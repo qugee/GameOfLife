@@ -10,7 +10,7 @@ public void setup () {
   // make the manager
   Interactive.make( this );
 
-  //your code to initialize buttons goes here
+  buttons = new int [50][50]; //your code to initialize buttons goes here
 
   //your code to initialize buffer goes here
 }
