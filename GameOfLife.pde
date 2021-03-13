@@ -12,8 +12,12 @@ public void setup () {
   Interactive.make( this );
 
   buttons = new Life[NUM_ROWS][NUM_COLS]; //your code to initialize buttons goes here
-
+  for(int i = 0;i<NUM_ROWS;i++)
+  for(int j = 0;j<NUM_COLS;j++)
+    buttons[i][j] = new Life(i,j); 
   //your code to initialize buffer goes here
+  
+  buffer = new boolean[NUM_ROWS][NUM_COLS];
 }
 
 public void draw () {
