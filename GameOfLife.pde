@@ -28,14 +28,20 @@ public void draw () {
 
   for(int r = 0;r<NUM_ROWS;r++){
   for(int c = 0;c<NUM_COLS;c++){   //use nested loops to draw the buttons here
-      buttons[r][c].draw();
       
       if(countNeighbors(r,c) == 3)
+      {
       buffer[r][c]=true;
+      }
       else if (countNeighbors(r,c) == 2 && buffer[r][c].getLife()==true)
+      {
       buffer[r][c]=true;
+      }
       else
-      buffer[r][c]=false;
+      {
+      buffer[r][c]=false;    
+      }
+      buttons[r][c].draw();
       }
       }
   copyFromBufferToButtons();
@@ -64,7 +70,7 @@ public void copyFromButtonsToBuffer() {
 }
 
 public boolean isValid(int r, int c) {
-  if (r<=NUM_ROWS && r>=0 && c<=NUM_COLS && c>=0)
+  if (r<NUM_ROWS && r>=0 && c<NUM_COLS && c>=0)
   return true;
   else
   return false;
