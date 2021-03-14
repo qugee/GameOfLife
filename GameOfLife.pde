@@ -47,9 +47,22 @@ public void draw () {
   copyFromBufferToButtons();
 }
 
-public void keyPressed() {
-  //your code here
-}
+  public void keyPressed() {
+    //your code here
+    if(key == ' ')
+      running = !running;
+    if(key == 'c')
+      for(int r = 0; r < NUM_ROWS; r++)
+        for(int c = 0; c < NUM_COLS; c++)
+          buttons[r][c].alive = false;
+    if(key == '1')
+     frameRate(2);
+    if(key == '2')
+     frameRate(6);
+    if(key == '3')
+      frameRate(10);
+  }
+
 
 public void copyFromBufferToButtons() {
   for(int r = 0;r<NUM_ROWS;r++)
