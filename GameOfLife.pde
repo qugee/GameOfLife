@@ -30,6 +30,12 @@ public void draw () {
   for(int r = 0;r<NUM_ROWS;r++){
   for(int c = 0;c<NUM_COLS;c++){   //use nested loops to draw the buttons here
       buttons[i][j] = new Life(r,c);
+      if(button[r][c]==3)
+      buffer[r][c]=true;
+      else if (button[r][c]==2 && buffer[r][c].alive==true)
+      buffer[r][c]=true;
+      else
+      buffer[r][c]=false;
       }
       }
   copyFromBufferToButtons();
