@@ -103,6 +103,12 @@ public class Life {
   }
   public boolean getLife() {
     //replace the code one line below with your code
+    
+    if(alive == true)
+      return true;
+    else if(alive != true)
+      return false;
+    else
     return false;
   }
   public void setLife(boolean living) {
