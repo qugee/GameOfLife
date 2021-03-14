@@ -13,9 +13,9 @@ public void setup () {
 
   buttons = new Life[NUM_ROWS][NUM_COLS]; //your code to initialize buttons goes here
   
-  for(int i = 0;i<NUM_ROWS;i++){   //your code to initialize buffer goes here
-  for(int j = 0;j<NUM_COLS;j++){
-     buttons[i][j] = new Life(i,j);
+  for(int r = 0;r<NUM_ROWS;r++){   //your code to initialize buffer goes here
+  for(int c = 0;c<NUM_COLS;c++){
+     buttons[i][j] = new Life(r,c);
   }
   }
     buffer = new boolean[NUM_ROWS][NUM_COLS];
@@ -27,9 +27,9 @@ public void draw () {
     return;
   copyFromButtonsToBuffer();
 
-  for(int i = 0;i<NUM_ROWS;i++){
-  for(int j = 0;j<NUM_COLS;j++){   //use nested loops to draw the buttons here
-      buttons[i][j] = new Life(i,j);
+  for(int r = 0;r<NUM_ROWS;r++){
+  for(int c = 0;c<NUM_COLS;c++){   //use nested loops to draw the buttons here
+      buttons[i][j] = new Life(r,c);
       }
       }
   copyFromBufferToButtons();
@@ -48,7 +48,8 @@ public void copyFromButtonsToBuffer() {
 }
 
 public boolean isValid(int r, int c) {
-  //your code here
+  if (r<=19 && r>=0 && c<=19 && c>=0)
+  return true;
   return false;
 }
 
