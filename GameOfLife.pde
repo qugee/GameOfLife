@@ -48,10 +48,10 @@ public void keyPressed() {
 public void copyFromBufferToButtons() {
   for(int r = 0;r<NUM_ROWS;r++)
   for(int c = 0;c<NUM_COLS;c++)
-  if (buffer[r][c].alive ==true)
-  button[r][c]=true;
+  if (buffer[r][c] == true)
+  button[r][c].alive=true;
   else
-  button[r][c]=false;
+  button[r][c].alive=false;
 }
 
 public void copyFromButtonsToBuffer() {
@@ -66,6 +66,7 @@ public void copyFromButtonsToBuffer() {
 public boolean isValid(int r, int c) {
   if (r<=NUM_ROWS && r>=0 && c<=NUM_COLS && c>=0)
   return true;
+  else
   return false;
 }
 
