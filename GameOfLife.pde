@@ -13,11 +13,10 @@ public void setup () {
 
   buttons = new Life[NUM_ROWS][NUM_COLS]; //your code to initialize buttons goes here
   
-  for(int r = 0;r<NUM_ROWS;r++){   //your code to initialize buffer goes here
-  for(int c = 0;c<NUM_COLS;c++){
-     buttons[i][j] = new Life(r,c);
-  }
-  }
+  for(int r = 0;r<NUM_ROWS;r++)   //your code to initialize buffer goes here
+  for(int c = 0;c<NUM_COLS;c++)
+     buttons[r][c] = new Life(r,c);
+
     buffer = new boolean[NUM_ROWS][NUM_COLS];
 }
 
