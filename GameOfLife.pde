@@ -48,14 +48,29 @@ public void copyFromButtonsToBuffer() {
 }
 
 public boolean isValid(int r, int c) {
-  if (r<=19 && r>=0 && c<=19 && c>=0)
+  if (r<=NUM_ROWS && r>=0 && c<=NUM_COLS && c>=0)
   return true;
   return false;
 }
 
 public int countNeighbors(int row, int col) {
   int neighbors = 0;
-  //your code here
+    if(isValid(row+1,col+1)&&grid[row+1][col+1]==true)
+  neighbors++;
+ if(isValid(row,col+1)&&grid[row][col+1]==true)
+  neighbors++;
+   if(isValid(row+1,col)&&grid[row+1][col]==true)
+  neighbors++;
+   if(isValid(row-1,col-1)&&grid[row-1][col-1]==true)
+  neighbors++;
+   if(isValid(row-1,col+1)&&grid[row-1][col+1]==true)
+  neighbors++;
+   if(isValid(row+1,col-1)&&grid[row+1][col-1]==true)
+  neighbors++;
+   if(isValid(row,col-1)&&grid[row][col-1]==true)
+  neighbors++;
+   if(isValid(row-1,col)&&grid[row-1][col]==true)
+  neighbors++;
   return neighbors;
 }
 
