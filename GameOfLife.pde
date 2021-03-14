@@ -28,7 +28,7 @@ public void draw () {
 
   for(int r = 0;r<NUM_ROWS;r++){
   for(int c = 0;c<NUM_COLS;c++){   //use nested loops to draw the buttons here
-      buttons[r][c] = new Life(r,c);
+      buttons[r][c].draw();
       
       if(countNeighbors(r,c) == 3)
       buffer[r][c]=true;
